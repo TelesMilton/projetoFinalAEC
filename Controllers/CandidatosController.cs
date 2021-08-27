@@ -40,12 +40,12 @@ namespace projetoFinalAEC.Controllers
             if (ModelState.IsValid)
             {
                 var cand = await CandidatoServico.Salvar(candidato);
-                return Redirect($"/Alunos/Details/{cand.Id}");
+                return Redirect($"/Candidatos/Details/{cand.Id}");
             }
             return View(candidato);
         }
 
-        // GET: Alunos/Edit/5
+        // GET: Candidatos/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
             var candidato = await CandidatoServico.BuscaPorId(id);
@@ -73,7 +73,7 @@ namespace projetoFinalAEC.Controllers
             return View(candidato);
         }
 
-        // GET: Alunos/Delete/5
+        // GET: Candidatos/Delete/5
         public async Task<IActionResult> Delete(int id)
         {
             var candidato = await candidatoServico.BuscaPorId(id);
@@ -85,7 +85,7 @@ namespace projetoFinalAEC.Controllers
             return View(candidato);
         }
 
-        // POST: Alunos/Delete/5
+        // POST: Candidatos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

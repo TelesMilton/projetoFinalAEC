@@ -28,8 +28,8 @@ namespace web_renderizacao_server_side
         public void ConfigureServices(IServiceCollection services)
         {
            
-            Program.AlunosAPI = Configuration.GetConnectionString("AlunosApi");
-            Program.PaisAPI = Configuration.GetConnectionString("PaisAPI");
+            Program.CandidatosAPI = Configuration.GetConnectionString("CandidatosApi");
+            Program.ProfissoesAPI = Configuration.GetConnectionString("ProfissoesAPI");
 
             services.AddScoped<IMaterialHttpClientService, MaterialHttpClientService>();
             

@@ -50,7 +50,7 @@ namespace projetoFinalAEC.Controllers
             return View(profissao);
         }
 
-        // GET: Alunos/Edit/5
+        // GET: Candidatos/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
             var profissao = await PaiServico.BuscaPorId(id);
